@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pQY-GI-zGT">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="c0f-Bh-359">
+            <objects>
+                <tabBarController id="pQY-GI-zGT" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KKy-zh-ZQX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yMk-O6-4e0" kind="relationship" relationship="viewControllers" id="gh9-Db-KU0"/>
+                        <segue destination="ONa-GK-TzH" kind="relationship" relationship="viewControllers" id="NYl-Ci-QXM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4XG-Px-Jba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1273" y="383"/>
+        </scene>
+        <!--Cryptos-->
+        <scene sceneID="NiW-QL-IXC">
+            <objects>
+                <viewController storyboardIdentifier="CryptoListViewController" id="ONa-GK-TzH" customClass="CryptoListViewController" customModule="EVIOS3_Correction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kgn-dz-Dse">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cLU-uH-Bk9">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BJa-9Z-Rca"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cLU-uH-Bk9" firstAttribute="leading" secondItem="BJa-9Z-Rca" secondAttribute="leading" id="4mf-Yz-xQC"/>
+                            <constraint firstItem="BJa-9Z-Rca" firstAttribute="bottom" secondItem="cLU-uH-Bk9" secondAttribute="bottom" id="B6N-eV-gBT"/>
+                            <constraint firstItem="cLU-uH-Bk9" firstAttribute="top" secondItem="BJa-9Z-Rca" secondAttribute="top" id="Gkr-zS-yMa"/>
+                            <constraint firstItem="BJa-9Z-Rca" firstAttribute="trailing" secondItem="cLU-uH-Bk9" secondAttribute="trailing" id="f7j-XP-tgR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cryptos" image="list.bullet" catalog="system" id="KcM-gV-WdU"/>
+                    <connections>
+                        <outlet property="cryptoListTableView" destination="cLU-uH-Bk9" id="gJJ-Ae-HXT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6tm-sA-Seq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="641"/>
+        </scene>
+        <!--CryptoLive-->
+        <scene sceneID="Ukg-Gm-BG5">
+            <objects>
+                <navigationController id="yMk-O6-4e0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="CryptoLive" image="livephoto" catalog="system" id="fNn-Vf-hgx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ecc-yr-TTZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0gD-S3-hRy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tlz-CF-3tT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAD-vx-hhy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-556" y="-27"/>
+        </scene>
+        <!--Crypto Live View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CryptoLiveViewController" customModule="EVIOS3_Correction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YkQ-Ki-BfS">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" name="Purple"/>
+                                <color key="sectionIndexBackgroundColor" name="Purple"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="tB3-JA-o5Y">
+                                <rect key="frame" x="187" y="417" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="Purple"/>
+                        <constraints>
+                            <constraint firstItem="YkQ-Ki-BfS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="R8Y-4u-NVO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YkQ-Ki-BfS" secondAttribute="trailing" id="fgA-gf-xIf"/>
+                            <constraint firstItem="YkQ-Ki-BfS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="swl-tO-3lI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YkQ-Ki-BfS" secondAttribute="bottom" id="tTD-vM-g50"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W3p-Ki-ENx">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="pTN-f2-1cY">
+                            <rect key="frame" x="57.666666666666657" y="5.6666666666666679" width="278" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                            <segments>
+                                <segment title="Default"/>
+                                <segment title="Croissant"/>
+                                <segment title="Descending"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedSort:" destination="BYZ-38-t0r" eventType="valueChanged" id="VIy-rv-LaF"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cryptoLiveTableView" destination="YkQ-Ki-BfS" id="zTC-ec-MTu"/>
+                        <outlet property="cryptoLoader" destination="tB3-JA-o5Y" id="plh-DI-MgO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-27"/>
+        </scene>
+        <!--Crypto Details View Controller-->
+        <scene sceneID="PUJ-3b-f4E">
+            <objects>
+                <viewController storyboardIdentifier="CryptoDetailsViewController" id="iTM-Y7-gll" customClass="CryptoDetailsViewController" customModule="EVIOS3_Correction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n0F-L1-obZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LZh-dH-edD">
+                                <rect key="frame" x="0.0" y="176" width="393" height="642"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP5-hM-bSZ">
+                                <rect key="frame" x="0.0" y="69" width="393" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39904.63$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1W-Hq-Y6m">
+                                <rect key="frame" x="10" y="129.66666666666666" width="373" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RXA-he-uZV"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="RXA-he-uZV" firstAttribute="bottom" secondItem="LZh-dH-edD" secondAttribute="bottom" id="3VY-BD-dsD"/>
+                            <constraint firstItem="LZh-dH-edD" firstAttribute="top" secondItem="b1W-Hq-Y6m" secondAttribute="bottom" constant="20" id="8gS-T7-mmy"/>
+                            <constraint firstItem="LZh-dH-edD" firstAttribute="leading" secondItem="RXA-he-uZV" secondAttribute="leading" id="AoY-pM-07e"/>
+                            <constraint firstItem="FP5-hM-bSZ" firstAttribute="top" secondItem="RXA-he-uZV" secondAttribute="top" constant="10" id="F0L-aG-neW"/>
+                            <constraint firstItem="b1W-Hq-Y6m" firstAttribute="leading" secondItem="RXA-he-uZV" secondAttribute="leading" constant="10" id="Z3Z-MW-ngg"/>
+                            <constraint firstItem="FP5-hM-bSZ" firstAttribute="leading" secondItem="RXA-he-uZV" secondAttribute="leading" id="lmy-NH-jYm"/>
+                            <constraint firstItem="RXA-he-uZV" firstAttribute="trailing" secondItem="b1W-Hq-Y6m" secondAttribute="trailing" constant="10" id="nRd-zG-ksJ"/>
+                            <constraint firstItem="RXA-he-uZV" firstAttribute="trailing" secondItem="LZh-dH-edD" secondAttribute="trailing" id="qXC-qB-g09"/>
+                            <constraint firstItem="RXA-he-uZV" firstAttribute="trailing" secondItem="FP5-hM-bSZ" secondAttribute="trailing" id="rDs-We-EyZ"/>
+                            <constraint firstItem="b1W-Hq-Y6m" firstAttribute="top" secondItem="FP5-hM-bSZ" secondAttribute="bottom" constant="20" id="xes-nt-Yla"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cryptoDetailsTableView" destination="LZh-dH-edD" id="5OM-nt-8Tb"/>
+                        <outlet property="cryptoName" destination="FP5-hM-bSZ" id="gIp-Q1-Ymb"/>
+                        <outlet property="cryptoPrice" destination="b1W-Hq-Y6m" id="eVQ-2k-Gjj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPd-O9-k2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="livephoto" catalog="system" width="128" height="124"/>
+        <namedColor name="Purple">
+            <color red="0.49399998784065247" green="0.0" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
